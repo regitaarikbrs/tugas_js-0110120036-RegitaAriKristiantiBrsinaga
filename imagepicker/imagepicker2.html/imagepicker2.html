@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<html lang="id">
+    <head>	
+        <title>IMAGE PICKER</title></head>
+        <style type="text/css">
+        body
+            {
+             flex: 20px
+               
+            } 
+        #judul
+        {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }    
+        
+        </style>
+        
+        <body>
+            <h1 id="judul" align="center"> Motor Antik </h1> 
+              <br>
+                <select onchange="gantigambar();" id="listgambar">
+                <option value="">Pilih Nama Motor</option>		
+                		
+                <option value="motor1.jpg">Honda Super Cup</option>
+                <option value="motor2.jpg">CB 100</option>
+                <option value="motor3.jpg">Puch 250cc</option>
+                <option value="motor4.jpg">Vespa terbaru 2020</option>
+                <option value="motor5.jpg">Vespa matic</option>
+            </select>		
+            <br/>	
+            <img src="motor1.jpg" style="width: 100%" id="gambar">
+            <script type="text/javascript">	
+                function gantigambar()
+                 {		
+                     let gambar = document.getElementById("listgambar").value;		
+                     document.getElementById("gambar").src = gambar;		
+                     alert("Ini adalah motor antik " + gambar);	  
+                   }
+               </script>
+         </body>
+</html>
